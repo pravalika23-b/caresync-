@@ -1,0 +1,33 @@
+{
+  "name": "hospital-management-server",
+  "version": "1.0.0",
+  "description": "Smart Hospital Management System Backend with Queue Management",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "migrate": "node src/database/migrate.js",
+    "seed": "node src/database/seed.js",
+    "test:api": "node test/api-tests.js"
+  },
+  "keywords": [
+    "hospital",
+    "queue-management",
+    "appointments",
+    "express",
+    "socketio"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.11.5",
+    "nodemailer": "^10.0.1",
+    "pptxgenjs": "^4.0.1",
+    "socket.io": "^4.8.1"
+  }
+}

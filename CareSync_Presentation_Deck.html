@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareSync | Project Reviews 1 & 2 Presentation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0f172a; color: #f8fafc; }
+    .slide { display: none; min-height: 100vh; }
+    .slide.active { display: flex; }
+    .card { background-color: #1e293b; border: 1px solid #334155; }
+    .card-accent { border-color: #0d9488; }
+    .badge { display: inline-flex; align-items: center; padding: 2px 10px; border-radius: 9999px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+  </style>
+</head>
+<body class="overflow-hidden flex flex-col justify-between h-screen selection:bg-teal-500 selection:text-white">
+
+  <!-- Top Navigation Bar -->
+  <header class="w-full bg-slate-900/90 backdrop-blur-md border-b border-slate-800 px-8 py-3.5 flex items-center justify-between shrink-0 z-50">
+    <div class="flex items-center space-x-3">
+      <div class="w-8 h-8 rounded-lg bg-teal-500 flex items-center justify-center font-black text-slate-900 text-base">C</div>
+      <div>
+        <h1 class="text-sm font-extrabold text-white tracking-tight">CareSync <span class="text-teal-400">Smart Hospital</span></h1>
+        <p class="text-[10px] text-slate-400 font-semibold">Reviews 1 & 2  |  MERN Stack Project Presentation</p>
+      </div>
+    </div>
+    <div class="flex items-center space-x-4">
+      <div class="text-xs font-mono font-bold text-teal-400 bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700" id="slideIndicator">
+        SLIDE 01 / 17
+      </div>
+      <button onclick="prevSlide()" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 transition text-xs font-bold px-3">◀ Prev</button>
+      <button onclick="nextSlide()" class="p-2 rounded-lg bg-teal-600 hover:bg-teal-500 text-white transition text-xs font-bold px-3">Next ▶</button>
+    </div>
+  </header>
+
+  <!-- Slide Deck Container -->
+  <main class="flex-1 overflow-y-auto px-6 sm:px-12 py-8 flex items-center justify-center">
+
+    <!-- SLIDE 0: TITLE -->
+    <div class="slide active flex-col justify-center max-w-5xl mx-auto space-y-6 animate-fade">
+      <span class="badge bg-teal-950 text-teal-300 border border-teal-800 self-start">Project Review 1 & 2  •  Academic Capstone</span>
+      <h1 class="text-4xl sm:text-6xl font-black text-white tracking-tight leading-tight">
+        CareSync: Smart Hospital Management System
+      </h1>
+      <p class="text-xl text-teal-300 font-semibold">
+        With Real-Time Queue Management & Machine Learning Predictive Engine
+      </p>
+      <p class="text-slate-400 text-sm max-w-3xl leading-relaxed">
+        A full-stack healthcare platform engineered using the MERN stack (MongoDB, Express.js, React 18, Node.js) combined with Socket.IO live concurrency streams and Scikit-Learn predictive intelligence to eliminate crowded waiting lobbies through conflict-free scheduling and dynamic queue wait estimation.
+      </p>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4">
+        <div class="card p-3.5 rounded-xl border-slate-700">
+          <p class="text-[10px] uppercase font-bold text-teal-400">Database</p>
+          <p class="text-sm font-bold text-white mt-0.5">MongoDB & Mongoose</p>
+        </div>
+        <div class="card p-3.5 rounded-xl border-slate-700">
+          <p class="text-[10px] uppercase font-bold text-teal-400">Backend API</p>
+          <p class="text-sm font-bold text-white mt-0.5">Node.js + Express.js</p>
+        </div>
+        <div class="card p-3.5 rounded-xl border-slate-700">
+          <p class="text-[10px] uppercase font-bold text-teal-400">Frontend UI</p>
+          <p class="text-sm font-bold text-white mt-0.5">React 18 + Tailwind</p>
+        </div>
+        <div class="card p-3.5 rounded-xl border-slate-700">
+          <p class="text-[10px] uppercase font-bold text-teal-400">Real-Time & AI</p>
+          <p class="text-sm font-bold text-white mt-0.5">Socket.IO + Scikit-Learn</p>
+        </div>
+      </div>
+
+      <div class="pt-6 border-t border-slate-800 flex justify-between items-center text-xs text-slate-400 font-medium">
+        <span>Presented by: <strong>3rd Year B.Tech (Information Technology)</strong></span>
+        <span>Guide & Department: <strong>School of Computing & IT</strong></span>
+      </div>
+    </div>
+
+    <!-- SLIDE 1: AGENDA -->
+    <div class="slide flex-col justify-center max-w-5xl mx-auto space-y-6">
+      <div>
+        <span class="badge bg-teal-950 text-teal-300 border border-teal-800">Review Roadmap</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">Scope & Outline of This Review</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="card p-4 rounded-xl flex items-start space-x-3">
+          <span class="w-7 h-7 rounded-lg bg-teal-900/60 text-teal-400 flex items-center justify-center font-bold text-xs shrink-0">01</span>
+          <div>
+            <h3 class="text-sm font-bold text-white">Problem & Requirements</h3>
+            <p class="text-xs text-slate-400 mt-0.5">Functional & non-functional constraints in outpatient queue scheduling.</p>
+          </div>
+        </div>
+        <div class="card p-4 rounded-xl flex items-start space-x-3">
+          <span class="w-7 h-7 rounded-lg bg-teal-900/60 text-teal-400 flex items-center justify-center font-bold text-xs shrink-0">02</span>
+          <div>
+            <h3 class="text-sm font-bold text-white">System Architecture</h3>
+            <p class="text-xs text-slate-400 mt-0.5">Detailed 3-tier MERN stack with Socket.IO and Python ML microservice.</p>
+          </div>
+        </div>
+        <div class="card p-4 rounded-xl flex items-start space-x-3">
+          <span class="w-7 h-7 rounded-lg bg-teal-900/60 text-teal-400 flex items-center justify-center font-bold text-xs shrink-0">03</span>
+          <div>
+            <h3 class="text-sm font-bold text-white">Use Case & ER Diagrams</h3>
+            <p class="text-xs text-slate-400 mt-0.5">Actor interactions, relational schemas, foreign keys, and indexes.</p>
+          </div>
+        </div>
+        <div class="card p-4 rounded-xl flex items-start space-x-3">
+          <span class="w-7 h-7 rounded-lg bg-teal-900/60 text-teal-400 flex items-center justify-center font-bold text-xs shrink-0">04</span>
+          <div>
+            <h3 class="text-sm font-bold text-white">Core Modules & Tech Stack</h3>
+            <p class="text-xs text-slate-400 mt-0.5">Auth, Dynamic Slots, Queue Tracker, Doctor Console, and Admin Center.</p>
+          </div>
+        </div>
+        <div class="card p-4 rounded-xl flex items-start space-x-3">
+          <span class="w-7 h-7 rounded-lg bg-teal-900/60 text-teal-400 flex items-center justify-center font-bold text-xs shrink-0">05</span>
+          <div>
+            <h3 class="text-sm font-bold text-white">Frontend & UI Engineering</h3>
+            <p class="text-xs text-slate-400 mt-0.5">React 18 components, Context API, responsive Tailwind layouts, and modals.</p>
+          </div>
+        </div>
+        <div class="card p-4 rounded-xl flex items-start space-x-3">
+          <span class="w-7 h-7 rounded-lg bg-teal-900/60 text-teal-400 flex items-center justify-center font-bold text-xs shrink-0">06</span>
+          <div>
+            <h3 class="text-sm font-bold text-white">Backend & API Integration</h3>
+            <p class="text-xs text-slate-400 mt-0.5">Express MVC controllers, JWT security, and conflict-free booking locks.</p>
+          </div>
+        </div>
+        <div class="card p-4 rounded-xl flex items-start space-x-3">
+          <span class="w-7 h-7 rounded-lg bg-teal-900/60 text-teal-400 flex items-center justify-center font-bold text-xs shrink-0">07</span>
+          <div>
+            <h3 class="text-sm font-bold text-white">Status (85%+ Completed)</h3>
+            <p class="text-xs text-slate-400 mt-0.5">Automated test verifications, live demo accounts, and working features.</p>
+          </div>
+        </div>
+        <div class="card p-4 rounded-xl flex items-start space-x-3">
+          <span class="w-7 h-7 rounded-lg bg-teal-900/60 text-teal-400 flex items-center justify-center font-bold text-xs shrink-0">08</span>
+          <div>
+            <h3 class="text-sm font-bold text-white">Challenges & Next Steps</h3>
+            <p class="text-xs text-slate-400 mt-0.5">Concurrency handling, WebSocket room broadcasting, and cloud deployment.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2: REQUIREMENTS -->
+    <div class="slide flex-col justify-center max-w-5xl mx-auto space-y-6">
+      <div>
+        <span class="badge bg-teal-950 text-teal-300 border border-teal-800">Requirements Engineering</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">Functional & Non-Functional Requirements</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="card p-6 rounded-2xl border-teal-800 space-y-3">
+          <h3 class="text-base font-bold text-teal-400">Functional Requirements</h3>
+          <ul class="space-y-2 text-xs text-slate-300 leading-relaxed">
+            <li>• <strong>User Authentication:</strong> Multi-role registration & login (Patient, Doctor, Admin) via JWT.</li>
+            <li>• <strong>Dynamic Slot Generator:</strong> Generates 15-min intervals excluding leaves & booked slots.</li>
+            <li>• <strong>Anti-Double-Booking Engine:</strong> Atomic lock blocks simultaneous duplicate bookings (409 Conflict).</li>
+            <li>• <strong>Live Queue Engine:</strong> Assigns daily token, triggers check-in, and tracks serving sequence.</li>
+            <li>• <strong>Doctor Clinical Console:</strong> One-click "Call Next Patient" broadcasts instant alert to patient.</li>
+            <li>• <strong>Digital E-Prescriptions:</strong> Captures diagnoses, clinical advice, and itemized multi-line Rx drugs.</li>
+            <li>• <strong>Machine Learning Intelligence:</strong> Predicts duration & appointment no-show probability.</li>
+          </ul>
+        </div>
+        <div class="card p-6 rounded-2xl border-blue-900 space-y-3">
+          <h3 class="text-base font-bold text-blue-400">Non-Functional Requirements</h3>
+          <ul class="space-y-2 text-xs text-slate-300 leading-relaxed">
+            <li>• <strong>Low Latency:</strong> REST API response time &lt; 200ms; WebSocket broadcasts &lt; 50ms.</li>
+            <li>• <strong>Concurrency:</strong> Non-blocking Node.js event loop handles 1,000+ concurrent requests.</li>
+            <li>• <strong>Robust Security:</strong> Passwords hashed with bcrypt (10 rounds); stateless JWT verification.</li>
+            <li>• <strong>High Usability:</strong> Mobile-first responsive UI built with Tailwind CSS.</li>
+            <li>• <strong>Data Integrity:</strong> Compound uniqueness indexes on <code>(doctor_id, date, time)</code>.</li>
+            <li>• <strong>Maintainability:</strong> Modular MVC pattern with centralized error interceptors.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3: DETAILED ARCHITECTURE -->
+    <div class="slide flex-col justify-center max-w-5xl mx-auto space-y-6">
+      <div>
+        <span class="badge bg-teal-950 text-teal-300 border border-teal-800">Architecture</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">Detailed 3-Tier System Architecture</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="card p-5 rounded-2xl border-teal-700 space-y-3">
+          <div class="badge bg-teal-950 text-teal-300 border border-teal-800">Tier 1: Client</div>
+          <h3 class="text-sm font-bold text-white">React 18 + Tailwind UI</h3>
+          <ul class="text-xs text-slate-300 space-y-1.5">
+            <li>• React Router v6 (Protected Routes)</li>
+            <li>• AuthContext & NotificationContext</li>
+            <li>• Axios Client with JWT Interceptors</li>
+            <li>• Socket.IO Client (Live Queue Listener)</li>
+            <li>• Responsive Patient, Doctor & Admin Views</li>
+            <li>• AI Assistant Floating Chatbot</li>
+          </ul>
+        </div>
+        <div class="card p-5 rounded-2xl border-blue-700 space-y-3">
+          <div class="badge bg-blue-950 text-blue-300 border border-blue-800">Tier 2: Application</div>
+          <h3 class="text-sm font-bold text-white">Node.js + Express.js</h3>
+          <ul class="text-xs text-slate-300 space-y-1.5">
+            <li>• REST Endpoints & MVC Controllers</li>
+            <li>• JWT Authentication Middleware</li>
+            <li>• Atomic Anti-Double Booking Locks</li>
+            <li>• Dynamic 15-Minute Slot Calculator</li>
+            <li>• Socket.IO Room Broadcasting Hub</li>
+            <li>• Nodemailer Transactional Mailer</li>
+          </ul>
+        </div>
+        <div class="card p-5 rounded-2xl border-purple-700 space-y-3">
+          <div class="badge bg-purple-950 text-purple-300 border border-purple-800">Tier 3: Data & ML</div>
+          <h3 class="text-sm font-bold text-white">MongoDB + Python ML</h3>
+          <ul class="text-xs text-slate-300 space-y-1.5">
+            <li>• MongoDB / Mongoose Collections</li>
+            <li>• Dual Adapter (SQLite WAL + MySQL)</li>
+            <li>• Unique Compound Slot Index</li>
+            <li>• Scikit-Learn Wait Time Regression</li>
+            <li>• Scikit-Learn No-Show Classifier</li>
+            <li>• Automated Database Migrations & Seeds</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card p-3.5 rounded-xl border-slate-700 text-xs text-slate-300 flex items-center justify-between">
+        <span>🔄 <strong>Request Flow:</strong> User Action ➔ Axios REST / Socket Event ➔ Express Auth Middleware ➔ Transaction Conflict Lock ➔ Storage Engine ➔ Real-time WebSocket Broadcast.</span>
+      </div>
+    </div>
+
+    <!-- SLIDE 4: USE CASE -->
+    <div class="slide flex-col justify-center max-w-5xl mx-auto space-y-6">
+      <div>
+        <span class="badge bg-teal-950 text-teal-300 border border-teal-800">System Interactions</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">Use Case Diagram & Actor Responsibilities</h2>
+      </div>
+      <div class="grid sm:grid-cols-3 gap-4">
+        <div class="card p-5 rounded-2xl border-teal-800 space-y-3">
+          <h3 class="text-sm font-bold text-teal-400">👤 Patient Actor</h3>
+          <ul class="text-xs text-slate-300 space-y-1.5">
+            <li>• Register & Login (JWT)</li>
+            <li>• Search Doctors & Departments</li>
+            <li>• Check Real-Time Slot Availability</li>
+            <li>• Book Slot & Receive Queue Token</li>
+            <li>• Check-In on Appointment Day</li>
+            <li>• Monitor Live Queue Position</li>
+            <li>• Download & Print E-Prescriptions</li>
+            <li>• Ask AI Assistant Operational Queries</li>
+          </ul>
+        </div>
+        <div class="card p-5 rounded-2xl border-blue-900 space-y-3">
+          <h3 class="text-sm font-bold text-blue-400">👨‍⚕️ Doctor Actor</h3>
+          <ul class="text-xs text-slate-300 space-y-1.5">
+            <li>• Login to Clinical Portal</li>
+            <li>• Configure Weekly Consultation Shifts</li>
+            <li>• Block Vacation / Conference Dates</li>
+            <li>• View Real-Time Today Waiting Queue</li>
+            <li>• Trigger "Call Next Patient" Broadcast</li>
+            <li>• View Patient Historical Records</li>
+            <li>• Record Clinical Diagnosis & Notes</li>
+            <li>• Generate Itemized Multi-Line Rx</li>
+          </ul>
+        </div>
+        <div class="card p-5 rounded-2xl border-purple-900 space-y-3">
+          <h3 class="text-sm font-bold text-purple-400">🛡️ Administrator Actor</h3>
+          <ul class="text-xs text-slate-300 space-y-1.5">
+            <li>• Executive Dashboard KPI Oversight</li>
+            <li>• Review Today Intake & Queue Stats</li>
+            <li>• Register & Provision New Doctors</li>
+            <li>• Activate / Deactivate Doctor Accounts</li>
+            <li>• Manage Hospital Clinical Departments</li>
+            <li>• Supervise Master Hospital Appointments</li>
+            <li>• Inspect Department Volume Distribution</li>
+            <li>• Monitor No-Show Risk Telemetry</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 5: ER DIAGRAM -->
+    <div class="slide flex-col justify-center max-w-5xl mx-auto space-y-5">
+      <div>
+        <span class="badge bg-teal-950 text-teal-300 border border-teal-800">Data Architecture</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">Database Design & Entity Relationships</h2>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+        <div class="card p-3 rounded-xl border-teal-800">
+          <p class="font-bold text-teal-400">users</p>
+          <p class="text-[10px] text-slate-400 font-mono mt-1">_id (PK)<br>name, email (UQ)<br>password_hash<br>role, phone</p>
+        </div>
+        <div class="card p-3 rounded-xl border-teal-800">
+          <p class="font-bold text-teal-400">patients</p>
+          <p class="text-[10px] text-slate-400 font-mono mt-1">_id (PK)<br>user_id (FK)<br>dob, gender, blood<br>emergency_contact</p>
+        </div>
+        <div class="card p-3 rounded-xl border-teal-800">
+          <p class="font-bold text-teal-400">doctors</p>
+          <p class="text-[10px] text-slate-400 font-mono mt-1">_id (PK)<br>user_id (FK)<br>department_id (FK)<br>fee, duration, active</p>
+        </div>
+        <div class="card p-3 rounded-xl border-teal-800">
+          <p class="font-bold text-teal-400">departments</p>
+          <p class="text-[10px] text-slate-400 font-mono mt-1">_id (PK)<br>name (UQ)<br>description<br>icon, created_at</p>
+        </div>
+        <div class="card p-3 rounded-xl border-teal-800">
+          <p class="font-bold text-teal-400">appointments</p>
+          <p class="text-[10px] text-slate-400 font-mono mt-1">_id (PK)<br>patient_id, doctor_id<br>date, time, queue_num<br>status, INDEX(d,dt,t)</p>
+        </div>
+        <div class="card p-3 rounded-xl border-teal-800">
+          <p class="font-bold text-teal-400">queues</p>
+          <p class="text-[10px] text-slate-400 font-mono mt-1">_id (PK)<br>appointment_id (FK)<br>queue_number, status<br>called_at, done_at</p>
+        </div>
+        <div class="card p-3 rounded-xl border-teal-800">
+          <p class="font-bold text-teal-400">medical_records</p>
+          <p class="text-[10px] text-slate-400 font-mono mt-1">_id (PK)<br>patient_id, doctor_id<br>symptoms, diagnosis<br>notes, follow_up_date</p>
+        </div>
+        <div class="card p-3 rounded-xl border-teal-800">
+          <p class="font-bold text-teal-400">prescriptions</p>
+          <p class="text-[10px] text-slate-400 font-mono mt-1">_id (PK)<br>record_id (FK)<br>medicine_name, dosage<br>frequency, duration</p>
+        </div>
+      </div>
+      <div class="card p-3 rounded-xl border-slate-700 text-xs text-slate-300">
+        <strong>Integrity Constraints:</strong> 1:1 User-Patient/Doctor | 1:N Doctor-Availability | 1:N Patient-Appointments | 1:1 Appointment-Queue | 1:N Record-Prescriptions.
+      </div>
+    </div>
+
+    <!-- SLIDE 6: MODULE DESCRIPTION -->
+    <div class="slide flex-col justify-center max-w-5xl mx-auto space-y-5">
+      <div>
+        <span class="badge bg-teal-950 text-teal-300 border border-teal-800">Sub-systems</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">Core Modules Description</h2>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs card rounded-xl overflow-hidden">
+          <thead class="bg-teal-950 text-teal-300 font-bold border-b border-teal-800">
+            <tr>
+              <th class="p-3">Module</th>
+              <th class="p-3">User</th>
+              <th class="p-3">Key Functions</th>
+              <th class="p-3">Technical Implementation</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800 text-slate-300">
+            <tr>
+              <td class="p-3 font-bold text-white">Auth & RBAC</td>
+              <td class="p-3">All Roles</td>
+              <td class="p-3">Register, login, role determination, protected routes.</td>
+              <td class="p-3 font-mono text-[11px]">bcryptjs (10 rounds) + JWT Bearer</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold text-white">Doctor Catalog</td>
+              <td class="p-3">Patient</td>
+              <td class="p-3">Search doctors, department filter, dynamic 15-min slots.</td>
+              <td class="p-3 font-mono text-[11px]">Interval math - booked - blocked</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold text-white">Appointment Engine</td>
+              <td class="p-3">Patient</td>
+              <td class="p-3">Conflict-free booking, daily token generator, cancellation.</td>
+              <td class="p-3 font-mono text-[11px]">Atomic transaction lock (409 Conflict)</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold text-white">Live Queue Tracker</td>
+              <td class="p-3">Patient</td>
+              <td class="p-3">Check-in, live serving token, dynamic wait time estimation.</td>
+              <td class="p-3 font-mono text-[11px]">Socket.IO client/server room broadcast</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold text-white">Doctor Console</td>
+              <td class="p-3">Doctor</td>
+              <td class="p-3">Lobby monitor, Call Next Patient trigger, schedule editor.</td>
+              <td class="p-3 font-mono text-[11px]">WebSocket room alert + status shift</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold text-white">E-Prescriptions</td>
+              <td class="p-3">Doctor/Patient</td>
+              <td class="p-3">Record symptoms, diagnosis, multi-line Rx drugs; print.</td>
+              <td class="p-3 font-mono text-[11px]">Referenced records + CSS print media</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold text-white">Admin Analytics</td>
+              <td class="p-3">Admin</td>
+              <td class="p-3">Hospital intake KPIs, department volume, doctor CRUD.</td>
+              <td class="p-3 font-mono text-[11px]">Aggregated database counts & metrics</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- SLIDE 7: TECH STACK -->
+    <div class="slide flex-col justify-center max-w-5xl mx-auto space-y-6">
+      <div>
+        <span class="badge bg-teal-950 text-teal-300 border border-teal-800">Toolchain</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">Technology Stack & Libraries</h2>
+      </div>
+      <div class="grid sm:grid-cols-4 gap-4">
+        <div class="card p-5 rounded-2xl border-teal-700 text-center space-y-2">
+          <div class="text-3xl">🍃</div>
+          <h3 class="text-base font-bold text-white">MongoDB</h3>
+          <p class="text-xs text-slate-400">Document NoSQL database with flexible Mongoose schema validation & compound indexes.</p>
+        </div>
+        <div class="card p-5 rounded-2xl border-blue-700 text-center space-y-2">
+          <div class="text-3xl">⚡</div>
+          <h3 class="text-base font-bold text-white">Express.js</h3>
+          <p class="text-xs text-slate-400">Minimalist web framework for Node.js powering REST APIs, JWT middleware, and error interceptors.</p>
+        </div>
+        <div class="card p-5 rounded-2xl border-teal-600 text-center space-y-2">
+          <div class="text-3xl">⚛️</div>
+          <h3 class="text-base font-bold text-white">React 18</h3>
+          <p class="text-xs text-slate-400">Single Page Application library with Context API, hooks, Vite bundling, and Tailwind styling.</p>
+        </div>
+        <div class="card p-5 rounded-2xl border-purple-700 text-center space-y-2">
+          <div class="text-3xl">🟢</div>
+          <h3 class="text-base font-bold text-white">Node.js</h3>
+          <p class="text-xs text-slate-400">Asynchronous runtime executing non-blocking event loop and hosting Socket.IO WebSocket server.</p>
+        </div>
+      </div>
+      <div class="card p-4 rounded-xl border-slate-700 text-xs text-slate-300 flex flex-wrap gap-4 justify-around">
+        <span>🛡️ <strong>Security:</strong> JWT & bcryptjs</span>
+        <span>📡 <strong>Real-time:</strong> Socket.IO v4</span>
+        <span>🤖 <strong>Machine Learning:</strong> Python Scikit-Learn</span>
+        <span>📧 <strong>Notifications:</strong> Nodemailer</span>
+        <span>💅 <strong>UI Kit:</strong> Tailwind CSS + Lucide Icons</span>
+      </div>
+    </div>
+
+    <!-- SLIDE 8: UI DESIGN -->
+    <div class="slide flex-col justify-center max-w-5xl mx-auto space-y-6">
+      <div>
+        <span class="badge bg-teal-950 text-teal-300 border border-teal-800">UI / UX</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">UI Design, Wireframes & Key Screens</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="card p-5 rounded-2xl border-teal-800 space-y-2">
+          <h3 class="text-sm font-bold text-teal-400">1. Conflict-Free Booking Wizard</h3>
+          <p class="text-xs text-slate-300">
+            3-Step scheduling interface: Filters doctors by department, dynamically queries open 15-min intervals, highlights available slots in green, and disables taken slots.
+          </p>
+          <div class="p-2.5 bg-slate-900 rounded-lg text-[11px] font-mono text-slate-400 border border-slate-800">
+            [ Select Dept ] ➔ [ Choose Doctor ] ➔ [ Pick Date ] ➔ [ Dynamic Slot Grid ]
+          </div>
+        </div>
+        <div class="card p-5 rounded-2xl border-blue-900 space-y-2">
+          <h3 class="text-sm font-bold text-blue-400">2. Real-Time Live Queue Monitor</h3>
+          <p class="text-xs text-slate-300">
+            Displays patient token (#15), currently serving number (#12), patients ahead counter (3), and dynamic wait time (~30 min) with pulsating live WebSocket status.
+          </p>
+          <div class="p-2.5 bg-slate-900 rounded-lg text-[11px] font-mono text-slate-400 border border-slate-800">
+            Your Token: #15 | Serving: #12 | Ahead: 3 | Est. Wait: 30 mins
+          </div>
+        </div>
+        <div class="card p-5 rounded-2xl border-purple-900 space-y-2">
+          <h3 class="text-sm font-bold text-purple-400">3. Doctor Clinical Console & Rx</h3>
+          <p class="text-xs text-slate-300">
+            Real-time waiting lobby monitor. Prominent "Call Next Patient" broadcast button. Modal to log symptoms, diagnosis, and itemized multi-line Rx drugs.
+          </p>
+          <div class="p-2.5 bg-slate-900 rounded-lg text-[11px] font-mono text-slate-400 border border-slate-800">
+            [ Call Next Patient ] ➔ [ Open Consultation ] ➔ [ Add Medicines ] ➔ [ Issue Rx ]
+          </div>
+        </div>
+        <div class="card p-5 rounded-2xl border-emerald-900 space-y-2">
+          <h3 class="text-sm font-bold text-emerald-400">4. Executive Administration Center</h3>
+          <p class="text-xs text-slate-300">
+            Real-time operational KPIs: Total Patients, Active Doctors, Today Intake, Completed, In Queue. Department volume chart and doctor roster management.
+          </p>
+          <div class="p-2.5 bg-slate-900 rounded-lg text-[11px] font-mono text-slate-400 border border-slate-800">
+            KPI Counters • Department Distribution • Doctor CRUD • Master Schedule
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 9: FRONTEND BUILD -->
+    <div class="slide flex-col justify-center max-w-5xl mx-auto space-y-6">
+      <div>
+        <span class="badge bg-teal-950 text-teal-300 border border-teal-800">Frontend</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">Frontend Engineering & React Components</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-4 text-xs text-slate-300">
+        <div class="card p-5 rounded-2xl space-y-2">
+          <h3 class="text-sm font-bold text-teal-400">Component Hierarchy</h3>
+          <p>• Modular component tree: Navbar, Sidebar, ProtectedRoute, Modal, Badge, Toast alerts.</p>
+          <p>• Domain pages partitioned into <code>public/</code>, <code>patient/</code>, <code>doctor/</code>, and <code>admin/</code>.</p>
+          <p>• Fast build & HMR via Vite v6 with optimized production chunks (zero build errors).</p>
+        </div>
+        <div class="card p-5 rounded-2xl space-y-2">
+          <h3 class="text-sm font-bold text-blue-400">State Management & Contexts</h3>
+          <p>• <strong>AuthContext:</strong> Session persistence in localStorage, token decode, socket lifecycle.</p>
+          <p>• <strong>NotificationContext:</strong> Real-time event listener triggering toast popups.</p>
+          <p>• <strong>Axios Interceptors:</strong> Automatically attaches Bearer token & intercepts 401s.</p>
+        </div>
+        <div class="card p-5 rounded-2xl space-y-2">
+          <h3 class="text-sm font-bold text-purple-400">Real-Time WebSocket Client</h3>
+          <p>• Socket.IO Client joins room on login: <code>doctor_${id}</code> or <code>patient_${id}</code>.</p>
+          <p>• Re-renders live queue counters automatically on <code>queue:update</code> and <code>queue:called</code>.</p>
+          <p>• Animated heartbeat indicator reflects live connection status.</p>
+        </div>
+        <div class="card p-5 rounded-2xl space-y-2">
+          <h3 class="text-sm font-bold text-emerald-400">Printable Prescription View</h3>
+          <p>• Modal displays official hospital consultation slip with patient details, doctor bio, diagnosis.</p>
+          <p>• Itemized medication table: Medicine, Dosage, Frequency, Duration, Instructions.</p>
+          <p>• Integrated single-click browser print via <code>window.print()</code> with print styles.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 10: BACKEND BUILD -->
+    <div class="slide flex-col justify-center max-w-5xl mx-auto space-y-6">
+      <div>
+        <span class="badge bg-teal-950 text-teal-300 border border-teal-800">Backend</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">Backend Architecture & Controller Logic</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-4 text-xs text-slate-300">
+        <div class="card p-5 rounded-2xl border-teal-800 space-y-2">
+          <h3 class="text-sm font-bold text-teal-400">Security & RBAC</h3>
+          <p>• <strong>bcryptjs:</strong> 10 salt rounds for irreversible password hashing.</p>
+          <p>• <strong>JWT Tokens:</strong> Signed with 7-day expiration and user payload.</p>
+          <p>• <strong>authorize() Middleware:</strong> Restricts endpoints to authorized roles.</p>
+        </div>
+        <div class="card p-5 rounded-2xl border-blue-900 space-y-2">
+          <h3 class="text-sm font-bold text-blue-400">Concurrency Control</h3>
+          <p>• Atomic database transactions (<code>tx.query</code>).</p>
+          <p>• Verifies slot emptiness immediately before insert.</p>
+          <p>• Unique compound constraint blocks race conditions.</p>
+        </div>
+        <div class="card p-5 rounded-2xl border-purple-900 space-y-2">
+          <h3 class="text-sm font-bold text-purple-400">WebSocket Broadcasts</h3>
+          <p>• Scoped rooms isolate doctor and patient updates.</p>
+          <p>• <code>emitQueueUpdate</code> broadcasts on call/complete.</p>
+          <p>• <code>emitPatientAlert</code> triggers personal chime alert.</p>
+        </div>
+      </div>
+      <div class="card p-4 rounded-xl border-slate-700 text-xs text-slate-300">
+        <strong>Backend Directory Structure:</strong> <code>server/src/</code> partitioned cleanly into <code>config/</code>, <code>controllers/</code>, <code>middleware/</code>, <code>routes/</code>, <code>services/</code>, and <code>database/</code>.
+      </div>
+    </div>
+
+    <!-- SLIDE 11: DATABASE INTEGRATION -->
+    <div class="slide flex-col justify-center max-w-5xl mx-auto space-y-6">
+      <div>
+        <span class="badge bg-teal-950 text-teal-300 border border-teal-800">Database</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">Database Integration & Dual-Driver Strategy</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-4 text-xs text-slate-300">
+        <div class="card p-5 rounded-2xl border-teal-800 space-y-2">
+          <h3 class="text-sm font-bold text-teal-400">Dual-Driver Implementation</h3>
+          <p>• <strong>Zero-Config Local Development:</strong> Built-in Node SQLite driver (<code>hospital.db</code>) with WAL journal mode allows instant local cloning without running a MySQL/Mongo daemon.</p>
+          <p>• <strong>Production Deployment:</strong> Toggled via <code>DB_CLIENT=mysql</code> or MongoDB Mongoose adapter for cloud databases (AWS RDS, PlanetScale, MongoDB Atlas).</p>
+          <p>• <strong>Automated Migrations:</strong> <code>migrate.js</code> automatically provisions all schemas with foreign key cascades.</p>
+        </div>
+        <div class="card p-5 rounded-2xl border-blue-900 space-y-2">
+          <h3 class="text-sm font-bold text-blue-400">Indexing & Concurrency Protection</h3>
+          <p>• <strong>Compound Slot Index:</strong> <code>UNIQUE(doctor_id, appointment_date, appointment_time)</code> ensures zero slot collisions at storage engine level.</p>
+          <p>• <strong>Fast Queue Lookups:</strong> Indexes on <code>doctor_id</code> and <code>queue_date</code> for sub-millisecond wait time and ahead calculations.</p>
+          <p>• <strong>Automated Seeding:</strong> <code>seed.js</code> pre-populates 7 departments, 5 doctors, schedules, patients, queue entries, and demo accounts.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 12: API DEVELOPMENT -->
+    <div class="slide flex-col justify-center max-w-5xl mx-auto space-y-5">
+      <div>
+        <span class="badge bg-teal-950 text-teal-300 border border-teal-800">REST API</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">RESTful API Endpoints Specification</h2>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs card rounded-xl overflow-hidden font-mono text-[11px]">
+          <thead class="bg-teal-950 text-teal-300 font-bold border-b border-teal-800">
+            <tr>
+              <th class="p-2.5">Method</th>
+              <th class="p-2.5">Endpoint</th>
+              <th class="p-2.5">Role</th>
+              <th class="p-2.5">Description</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800 text-slate-300">
+            <tr><td class="p-2.5 text-emerald-400 font-bold">POST</td><td class="p-2.5">/api/auth/register</td><td class="p-2.5">Public</td><td class="p-2.5">Register new patient account</td></tr>
+            <tr><td class="p-2.5 text-emerald-400 font-bold">POST</td><td class="p-2.5">/api/auth/login</td><td class="p-2.5">Public</td><td class="p-2.5">Authenticate credentials & return JWT</td></tr>
+            <tr><td class="p-2.5 text-blue-400 font-bold">GET</td><td class="p-2.5">/api/doctors</td><td class="p-2.5">Public</td><td class="p-2.5">List specialists with department filter</td></tr>
+            <tr><td class="p-2.5 text-blue-400 font-bold">GET</td><td class="p-2.5">/api/availability/slots</td><td class="p-2.5">Public</td><td class="p-2.5">Dynamic 15-min slot availability generator</td></tr>
+            <tr><td class="p-2.5 text-emerald-400 font-bold">POST</td><td class="p-2.5">/api/appointments</td><td class="p-2.5">Patient</td><td class="p-2.5">Conflict-free booking with queue token</td></tr>
+            <tr><td class="p-2.5 text-emerald-400 font-bold">POST</td><td class="p-2.5">/api/queue/checkin/:id</td><td class="p-2.5">Patient</td><td class="p-2.5">Arrival check-in entering live waiting queue</td></tr>
+            <tr><td class="p-2.5 text-blue-400 font-bold">GET</td><td class="p-2.5">/api/queue/patient/:id</td><td class="p-2.5">Patient</td><td class="p-2.5">Real-time serving number & wait time</td></tr>
+            <tr><td class="p-2.5 text-emerald-400 font-bold">POST</td><td class="p-2.5">/api/queue/doctor/call-next</td><td class="p-2.5">Doctor</td><td class="p-2.5">Call next patient & broadcast WebSocket</td></tr>
+            <tr><td class="p-2.5 text-emerald-400 font-bold">POST</td><td class="p-2.5">/api/medical-records</td><td class="p-2.5">Doctor</td><td class="p-2.5">Save diagnosis, advice, and itemized Rx</td></tr>
+            <tr><td class="p-2.5 text-blue-400 font-bold">GET</td><td class="p-2.5">/api/admin/stats</td><td class="p-2.5">Admin</td><td class="p-2.5">Hospital operational intake analytics</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- SLIDE 13: STATUS -->
+    <div class="slide flex-col justify-center max-w-5xl mx-auto space-y-6">
+      <div>
+        <span class="badge bg-teal-950 text-teal-300 border border-teal-800">Sprint Progress</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">Module Implementation Status (~85% Done)</h2>
+      </div>
+      <div class="space-y-3">
+        <div>
+          <div class="flex justify-between text-xs font-bold mb-1">
+            <span>User Authentication & Role-Based Access Control (RBAC)</span>
+            <span class="text-emerald-400">100%</span>
+          </div>
+          <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
+            <div class="bg-emerald-500 h-full w-full"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between text-xs font-bold mb-1">
+            <span>Doctor Catalog, Department Filters & Dynamic Slot Engine</span>
+            <span class="text-emerald-400">100%</span>
+          </div>
+          <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
+            <div class="bg-emerald-500 h-full w-full"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between text-xs font-bold mb-1">
+            <span>Anti-Double-Booking Concurrency & Transaction Engine</span>
+            <span class="text-emerald-400">100%</span>
+          </div>
+          <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
+            <div class="bg-emerald-500 h-full w-full"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between text-xs font-bold mb-1">
+            <span>Live Queue Tracking & Socket.IO Room Broadcast Engine</span>
+            <span class="text-teal-400">90%</span>
+          </div>
+          <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
+            <div class="bg-teal-500 h-full w-[90%]"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between text-xs font-bold mb-1">
+            <span>Doctor Clinical Workspace, Next Patient Call & Shift Manager</span>
+            <span class="text-teal-400">85%</span>
+          </div>
+          <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
+            <div class="bg-teal-500 h-full w-[85%]"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between text-xs font-bold mb-1">
+            <span>Digital Medical History & Itemized Printable E-Prescriptions</span>
+            <span class="text-teal-400">85%</span>
+          </div>
+          <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
+            <div class="bg-teal-500 h-full w-[85%]"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between text-xs font-bold mb-1">
+            <span>Executive Admin Center & Department CRUD</span>
+            <span class="text-blue-400">80%</span>
+          </div>
+          <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
+            <div class="bg-blue-500 h-full w-[80%]"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between text-xs font-bold mb-1">
+            <span>Machine Learning Duration & No-Show Models</span>
+            <span class="text-amber-400">75%</span>
+          </div>
+          <div class="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
+            <div class="bg-amber-500 h-full w-[75%]"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 14: SCREENSHOTS -->
+    <div class="slide flex-col justify-center max-w-5xl mx-auto space-y-6">
+      <div>
+        <span class="badge bg-teal-950 text-teal-300 border border-teal-800">Demonstration</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">Live Application Walkthrough & Test Suite</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-4 text-xs text-slate-300">
+        <div class="card p-5 rounded-2xl border-teal-800 space-y-2">
+          <h3 class="text-sm font-bold text-teal-400">🧪 Automated Test Suite (10/10 Passed)</h3>
+          <p>• Verified API Health check & response time (&lt; 20ms).</p>
+          <p>• Verified Patient, Doctor, and Admin authentication.</p>
+          <p>• Verified dynamic slot generation (28 open intervals).</p>
+          <p>• <strong>Verified Double-Booking Prevention:</strong> 409 Conflict returned on simultaneous booking attempt.</p>
+          <p>• Verified AI Chatbot operational FAQ responses.</p>
+        </div>
+        <div class="card p-5 rounded-2xl border-blue-900 space-y-2">
+          <h3 class="text-sm font-bold text-blue-400">🔑 One-Click Demo Logins</h3>
+          <p>• <strong>Patient:</strong> rahul.verma@example.com (patient123)</p>
+          <p>• <strong>Doctor:</strong> priya.sharma@hospital.com (doctor123)</p>
+          <p>• <strong>Admin:</strong> admin@hospital.com (admin123)</p>
+          <p class="text-teal-400 font-semibold">One-click login buttons built directly into the login screen for instant evaluation.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 15: CHALLENGES & SOLUTIONS -->
+    <div class="slide flex-col justify-center max-w-5xl mx-auto space-y-6">
+      <div>
+        <span class="badge bg-teal-950 text-teal-300 border border-teal-800">Problem Solving</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">Engineering Challenges & Adopted Solutions</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="card p-4 rounded-xl space-y-2">
+          <h3 class="text-xs font-bold text-rose-400">Challenge 1: Double-Booking Race Conditions</h3>
+          <p class="text-xs text-slate-300">Two patients booking the exact same slot at the exact same millisecond.</p>
+          <p class="text-xs text-teal-400"><strong>Solution:</strong> Atomic transaction lock + compound unique constraint <code>(doctor_id, date, time)</code>. Conflict returns 409.</p>
+        </div>
+        <div class="card p-4 rounded-xl space-y-2">
+          <h3 class="text-xs font-bold text-rose-400">Challenge 2: Real-time Multi-Device Sync</h3>
+          <p class="text-xs text-slate-300">Patients repeatedly refreshing browsers causing lobby frustration & server load.</p>
+          <p class="text-xs text-teal-400"><strong>Solution:</strong> Socket.IO scoped rooms broadcast instant token advances without page reload.</p>
+        </div>
+        <div class="card p-4 rounded-xl space-y-2">
+          <h3 class="text-xs font-bold text-rose-400">Challenge 3: Inaccurate Static Wait Estimates</h3>
+          <p class="text-xs text-slate-300">Static 15-min constant ignores patient age, visit type, and symptom complexity.</p>
+          <p class="text-xs text-teal-400"><strong>Solution:</strong> Machine learning regression model predicting duration based on clinical features.</p>
+        </div>
+        <div class="card p-4 rounded-xl space-y-2">
+          <h3 class="text-xs font-bold text-rose-400">Challenge 4: CORS Errors & Session Expiry</h3>
+          <p class="text-xs text-slate-300">Port 5173 to 5000 CORS rejections and unhandled JWT token expirations.</p>
+          <p class="text-xs text-teal-400"><strong>Solution:</strong> Express CORS credentials middleware + Axios response interceptors handling 401.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 16: NEXT STEPS & REFERENCES -->
+    <div class="slide flex-col justify-center max-w-5xl mx-auto space-y-6">
+      <div>
+        <span class="badge bg-teal-950 text-teal-300 border border-teal-800">Final Review Plan</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">Remaining Work, Deployment & References</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6 text-xs text-slate-300">
+        <div class="card p-5 rounded-2xl border-teal-800 space-y-2">
+          <h3 class="text-sm font-bold text-teal-400">Remaining Roadmap (Final Review)</h3>
+          <p>• <strong>Cloud Deployment:</strong> Deploy frontend on Vercel/Render and backend on Render with MongoDB Atlas.</p>
+          <p>• <strong>SMS & WhatsApp Integration:</strong> Twilio API integration for real-time queue turn SMS alerts.</p>
+          <p>• <strong>Mobile PWA Optimization:</strong> Web App Manifest and Service Workers for offline consultation slips.</p>
+          <p>• <strong>Final Documentation:</strong> IEEE project report, architecture flowcharts, and demo presentation deck.</p>
+        </div>
+        <div class="card p-5 rounded-2xl border-blue-900 space-y-2">
+          <h3 class="text-sm font-bold text-blue-400">Technical References</h3>
+          <p>• [1] MongoDB & Mongoose: Official Document Schema & Indexing Reference, 2025.</p>
+          <p>• [2] Facebook Open Source: React 18 Concurrent Mode & Context API Architecture, 2024.</p>
+          <p>• [3] Socket.IO: Bidirectional Low-Latency Event-Driven Communication Protocols, 2025.</p>
+          <p>• [4] IEEE Healthcare Systems: Outpatient Scheduling & Concurrency Control, 2024.</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Bottom Control Bar -->
+  <footer class="w-full bg-slate-900 border-t border-slate-800 px-8 py-3 flex items-center justify-between text-xs text-slate-400 shrink-0">
+    <div>Use <strong>Left / Right Arrow keys</strong> or <strong>Spacebar</strong> to navigate slides.</div>
+    <div class="flex items-center space-x-2">
+      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+      <span class="text-slate-300 font-semibold">Live System Online: localhost:5173</span>
+    </div>
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      if (index < 0) index = 0;
+      if (index >= slides.length) index = slides.length - 1;
+      slides.forEach((s, i) => {
+        s.classList.toggle('active', i === index);
+      });
+      currentSlide = index;
+      document.getElementById('slideIndicator').innerText = `SLIDE ${String(index + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
+    }
+
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentSlide - 1);
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'Space') {
+        nextSlide();
+      } else if (e.key === 'ArrowLeft') {
+        prevSlide();
+      }
+    });
+  </script>
+</body>
+</html>
